@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>websocket聊天</title>
+	<script src="jquery.js"></script>
+	<style type="text/css">
+		section{
+			width: 500px;
+			height: 700px;
+			box-sizing: border-box;
+			border: 1px solid red;
+			padding-top: 88px;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<input id="username" type="text" name=""><br>
+		<input id="password" type="password" name=""><br>
+		<button id="login">登录</button>
+		<button id="reg">注册</button>
+	</section>
+</body>
+<script type="text/javascript">
+	$('#reg').click(function(){  //---注册
+		$.ajax({
+			url: "/reg",
+			data: {user:$('#username').val(),pass:$('#password').val()},
+			dataType: 'json',
+			success(res){
+				if(res.code){
+					alert('注册失败，'+res.msg)
+				}else{
+					alert('注册成功')
+				}
+			},
+			error(err){
+				console.log(err)
+				alert('注册失败，网络不通')
+			}
+		})
+	}) 
+	$('#login').click(function(){
+		$.ajax({
+			url: '/login',
+			data: {user:$('#username').val(),pass:$('#password').val()},
+			dataType: 'json',
+			success(res){
+				if(res.code){
+					alert('登录失败，'+res.msg)
+				}else{
+					alert('登录成功')
+				}
+			},
+			error(err){
+				console.log(err);
+				alert('登录失败，网路不通')
+			}
+		})
+
+	})
+
+</script>
+</html>
