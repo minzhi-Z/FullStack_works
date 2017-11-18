@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>websocket聊天</title>
+	<script src="http://localhost:8080/socket.io/socket.io.js"></script>
+	<style type="text/css">
+		section{
+			width: 500px;
+			height: 700px;
+			box-sizing: border-box;
+			border: 1px solid red;
+			padding-top: 88px;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<input id="username" type="text" name=""><br>
+		<input id="password" type="password" name=""><br>
+		<button id="login">登录</button>
+		<button id="reg">注册</button><br>
+		<textarea id="txts"></textarea>
+		<button id="send">发送</button>
+
+	</section>
+</body>
+<script type="text/javascript">
+	let sock=io.connect('ws://localhost:8080/');
+
+	let user=document.getElementById('username');
+	let pass=document.getElementById('password');
+	let reg=document.getElementById('reg');
+	let login=document.getElementById('login');
+	let txts=document.getElementById('txts');
+	let send=document.getElementById('send');
+
+//---点击注册按钮注册
+	reg.onclick=function(){
+		sock.emit('reg',user.value,pass.value);
+	}
+	sock.on('reg_res',(code,msg)=>{
+		if(code){
+			alert('注册失败'+msg)
+		}else{
+			alert('注册成功')
+		}
+	})
+
+//----点击登录按钮登录
+	login.onclick=function(){
+		sock.emit('login',user.value,pass.value);
+	}
+	sock.on('login_res',(code,msg)=>{
+		if(code){
+			alert('登录失败'+msg)
+		}else{
+			alert('登录成功')
+		}
+	})
+
+
+
+</script>
+</html>
