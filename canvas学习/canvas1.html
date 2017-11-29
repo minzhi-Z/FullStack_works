@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas画布</title>
+	<style type="text/css">
+		body{
+			background: black;
+			text-align: center;
+		}
+		canvas{
+			background: #ffffff;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			let $C=document.getElementById("can");
+			let gd=$C.getContext("2d");
+
+			gd.moveTo(100,100)
+			gd.lineTo(400,400)
+
+			gd.strokeStyle="red"
+			gd.stroke()
+
+			gd.beginPath()
+			gd.moveTo(400,400)
+			gd.lineTo(400,600)
+			gd.strokeStyle="green"
+			gd.stroke()
+
+
+		}
+
+	</script>
+</head>
+<body>
+	<canvas id="can" width="1000" height="800">
+		您的浏览器不支持canvas画布，请下载最新浏览器
+	</canvas>
+</body>
+</html>

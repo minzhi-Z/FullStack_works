@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>画布画矩形</title>
+	<style type="text/css">
+		body{
+			background: black;
+			text-align: center;
+		}
+		canvas{
+			background: #ffffff;
+			margin-top: 80px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			let $canvas=document.getElementById('c');
+			let gd=$canvas.getContext('2d');
+
+			// gd.strokeStyle="red";
+			// gd.strokeRect(200,200,400,200);
+
+
+			function d2a(ang){  //--角度换算为弧度
+				return ang*Math.PI/180
+			}
+			function a2d(rad){
+				return rad*180/Math/PI
+			}
+
+
+			let [a,b,c,d]=[200,200,400,200];
+			gd.fillStyle="green";
+			gd.fillRect(a,b,c,d)
+			let ang=0;
+			$canvas.onclick=function(ev){
+				if(
+					ev.offsetX>=1&&ev.offsetX>1+a&&ev.offsetX<=b+c
+					&&ev.offsetY>=1&&ev.offsetY>1+b&&ev.offsetY<=b+d
+					){
+					ang+=45;
+					if(ang==360){ang=45}
+					gd.clearRect(0,0,$canvas.width,$canvas.height)
+					gd.fillStyle='red';
+					gd.save()
+					gd.translate(400,300)
+					gd.rotate(d2a(ang))
+					gd.fillRect(-200,-100,400,200)
+					gd.restore()
+
+				}else{
+					alert("不在矩形里面")
+				}
+
+
+			};
+
+		}
+	</script>
+</head>
+<body>
+	<canvas id="c" width="1000" height="700">
+		您的浏览器不支持canvas标签
+	</canvas>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas做饼图</title>
+	<style type="text/css">
+		body{
+			background: black;
+			text-align: center;
+		}
+		canvas{
+			background: #ffffff;
+			margin-top: 80px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			let $canvas=document.getElementById('c');
+			let gd=$canvas.getContext('2d');
+
+			gd.strokeStyle='red';
+			gd.arc(300,300,200,0,7)
+			gd.stroke()
+			gd.fillStyle='green';
+			gd.fill()
+
+		}
+	</script>
+</head>
+<body>
+	<canvas id="c" width="1000" height="700">
+		您的浏览器不支持canvas标签
+	</canvas>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>模仿画笔</title>
+	<style type="text/css">
+		body{
+			background: black;
+			text-align: center;
+		}
+		canvas{
+			background: #ffffff;
+			margin-top: 80px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			let $canvas=document.getElementById('c');
+			let gd=$canvas.getContext('2d');
+			let lastX,lastY;
+			$canvas.onmousedown=function(ev){
+				lastX=ev.offsetX;
+				lastY=ev.offsetY;
+
+				$canvas.onmousemove=function(ev){
+					gd.beginPath()
+
+					gd.moveTo(lastX,lastY);
+					gd.lineTo(ev.offsetX,ev.offsetY);
+
+					lastX=ev.offsetX;
+					lastY=ev.offsetY;
+
+					gd.strokeStyle='red';
+					gd.stroke();
+				};
+
+				$canvas.onmouseup=function(){
+					this.onmousemove=null;
+					this.onmouseup=null;
+				}
+
+
+			};
+			
+
+
+		}
+	</script>
+</head>
+<body>
+	<canvas id="c" width="1000" height="700">
+		您的浏览器不支持canvas标签
+	</canvas>
+</body>
+</html>
