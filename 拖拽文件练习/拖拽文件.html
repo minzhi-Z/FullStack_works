@@ -1,10 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>拖拽文件</title>
+   <meta charset="UTF-8">
+   <title>拖拽文件</title>
+   <style type="text/css">
+   #div1 {
+      width: 500px;
+      height: 300px;
+      text-align: center;
+      line-height: 300px;
+      background: #ccc;
+      margin: 100px auto;
+      border: 2px solid black;
+   }
+   </style>
+   <script type="text/javascript">
+   window.onload = function() {
+      //---- dom3事件，通过事件监听添加
+      // dragenter     进入
+      // dragleave     离开
+      // dragover      悬停--只要没离开就一直发生
+      // drop          松开鼠标--如果dragover不阻止默认事件，那么drop就不会发生
+      let oDiv = document.getElementById('div1')
+
+      oDiv.addEventListener('dragenter', function() {
+         oDiv.innerHTML = "释放鼠标";
+      }, false);
+
+      oDiv.addEventListener('dragleave',function(){
+      	oDiv.innerHTML="将文件拖拽至此区域"
+      },false)
+
+      //--鼠标悬停，只要鼠标没离开就一直发生
+      oDiv.addEventListener('dragover',function(ev){
+      	console.log('dragover')
+
+      	ev.preventDefault()
+      },false)
+
+      oDiv.addEventListener('drop',function(ev){
+      	console.log('drop')
+      	ev.preventDefault(); //--阻止浏览器的默认打开文件操作
+      },false)
+
+
+   };
+   </script>
 </head>
+
 <body>
-	
+   <div id="div1">
+      将文件拖拽至此区域
+   </div>
 </body>
+
 </html>

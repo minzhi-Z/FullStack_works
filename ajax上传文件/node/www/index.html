@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>上传文件</title>
+</head>
+<script type="text/javascript">
+	window.onload=function(){
+		let file=document.getElementById('file')
+		let btn=document.getElementById('btn')
+
+		btn.onclick=function(){
+			//--创建表单数据
+			let formData=new FormData();
+			formData.set('f1',file.files[0])
+
+			let oAjax=new XMLHttpRequest();
+			oAjax.open("post","/upload",true)
+			oAjax.send(formData) //--发送表单数据
+			oAjax.onreadystatechange=function(){
+				if(oAjax.readyState==4){
+					alert(oAjax.status)
+				}
+			}
+		}
+	}
+</script>
+<body>
+	<input type="file" id="file" multiple="true">
+	<!-- multiple 属性可以让它选择多个文件上传 -->
+	<button id="btn">上传</button>
+</body>
+</html>

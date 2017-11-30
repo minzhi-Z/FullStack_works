@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>webworker多进程</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			let oBtn=document.getElementById('btn')
+			let a=document.getElementById('a')
+			let b=document.getElementById('b')
+
+			oBtn.onclick=function(){
+				let n1=a.value*1; //转为数字格式
+				let n2=b.value*1;
+				//--1.创建一个子进程
+				let w=new Worker('w1.js');
+				//--2.发送数据给子进程
+				w.postMessage({n1,n2})
+				//--6.接受子进程返回的结果
+				w.onmessage=function(ev){
+					alert(ev.data)
+				}
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<input id="a" type="text" name="">
+	<input id="b" type="text" name="">
+	<input id="btn" type="button" value="计算">
+</body>
+</html>
