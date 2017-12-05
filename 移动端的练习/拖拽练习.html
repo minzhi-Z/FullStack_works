@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>拖拽练习</title>
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+	<style type="text/css">
+		*{
+			margin:0;padding:0;
+		}
+		body{
+			height: 3000px;
+		}
+		.div1{
+			width: 100px;
+			height: 100px;
+			background:red;
+			position: absolute;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			let oDiv=document.querySelector(".div1");
+			let maxWidth=document.body.clientWidth-oDiv.clientWidth;
+			//---X方向上可以拖动的最大距离就是窗口的可视区域减掉元素自身的可视宽度
+			// console.log(oDiv.clientWidth)
+
+
+			oDiv.addEventListener("touchstart",ev=>{
+				let disX=ev.targetTouches[0].pageX-oDiv.offsetLeft;
+				let disY=ev.targetTouches[0].pageY-oDiv.offsetTop;
+				console.log(disX,disY) //---获取手指按下去的时候在DOM上的位置
+
+				function fnMove(ev){
+					ev.preventDefault(); //--阻止浏览器的默认拖动操作
+
+					let moveX=ev.targetTouches[0].pageX-disX; //-在X方向移动的距离
+					let moveY=ev.targetTouches[0].pageY-disY; //-在Y方向移动的距离
+					if(moveX<0){
+						oDiv.style.left="0px";
+						oDiv.style.top=moveY+"px";
+					}else if(moveX>0 && moveX<=maxWidth){
+						oDiv.style.left=moveX+'px';
+						oDiv.style.top=moveY+'px';
+					}else{
+						oDiv.style.left=maxWidth+'px';
+						oDiv.style.top=moveY+"px";
+					}
+
+					// console.log(maxWidth,moveX,moveY)
+				}
+
+				function fnEnd(){
+					oDiv.removeEventListener("touchmove",fnMove,false);
+					oDiv.removeEventListener("touchend",fnEnd,false);
+				}
+
+				oDiv.addEventListener("touchmove",fnMove,false);
+				oDiv.addEventListener("touchend",fnEnd,false);
+
+			},false);
+
+		}
+	</script>
+</head>
+<body>
+	<div class="div1"></div>
+</body>
+</html>

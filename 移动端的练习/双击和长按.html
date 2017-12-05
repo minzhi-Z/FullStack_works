@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双击和长按</title>
+	<style type="text/css">
+		body{
+			height: 3000px;
+			background:-webkit-linear-gradient(left top, red, green);
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			let oB=document.querySelector("body");
+			let firstStart=0; //-第一次按下的时间
+			let firstEnd=0;  //-第一次离开的时间
+			let timer=null;
+
+			oB.addEventListener('touchstart',ev=>{
+				firstStart=Date.now();
+
+				timer=setTimeout(function(){
+					console.log("长按")
+				},1500)
+			},false);
+
+			oB.addEventListener('touchend',ev=>{
+				clearTimeout(timer);
+				if(Date.now()-firstStart<=800){
+					console.log('单击，tap')
+
+					if(Date.now()-firstEnd<300){
+						console.log('双击，doubleTap')
+					}
+
+					firstEnd=Date.now()
+				}else{
+					console.log("long tap")
+				}
+				// console.log('end',Date.now())
+			},false)
+
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

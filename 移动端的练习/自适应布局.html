@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		html,body{
+			width: 100%;
+		}
+		div{
+			width: 100%;
+			height: 60px;
+			background: green;
+			font-size: 1rem;
+		}
+
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			let maxW=document.body.clientWidth;
+			//--假如我们以iphone6的375px宽分辨率做基准，在它分辨率下面的时候是1rem等于16px;
+			//--maxW/html.font-size = 375/16
+			let fontS=maxW/(375/16);
+			console.log(fontS)
+			let ht=document.getElementsByTagName('html')[0];
+			ht.style.fontSize=fontS+'px';
+
+		}
+	</script>
+</head>
+<body>
+	<div>
+		这是一个自适应的div和文字
+	</div>
+</body>
+</html>
