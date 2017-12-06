@@ -3,8 +3,61 @@
 <head>
 	<meta charset="UTF-8">
 	<title>多点拖拽</title>
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		.box{width: 80px;height: 80px;position:absolute;}
+		.a1{top:10px;left:10px;background:red;}
+		.a2{top:100px;left:100px;background:green;}
+		.a3{right: 50px;top: 100px;background:blue;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			//-console.log(document.documentElement.clientWidth);
+			let oDivs=document.querySelectorAll('.box');
+			oDivs.forEach(item=>drag(item));  //-循环调用drag事件
+
+			function drag(dom){  //---定义一个拖动事件
+				let maxW=document.body.clientWidth-dom.clientWidth;
+				console.log(maxW)
+				
+				dom.addEventListener('touchstart',ev=>{
+					let disX=ev.targetTouches[0].pageX-dom.offsetLeft;
+					let disY=ev.targetTouches[0].pageY-dom.offsetTop;
+					console.log(disX,disY)
+
+					function fnMove(ev){
+						ev.preventDefault();  //--阻止浏览器的默认事件
+						let moveX=ev.targetTouches[0].pageX-disX;
+						let moveY=ev.targetTouches[0].pageY-disY;
+						if(moveX<0){
+							dom.style.left='0px';
+							dom.style.top=moveY+'px';
+						}else if(moveX>0&&moveX<=maxW){
+							dom.style.left=moveX+'px';
+							dom.style.top=moveY+'px';
+						}else{
+							dom.style.left=maxW+'px';
+							dom.style.top=moveY+'px';
+						}	
+					}
+					function fnEnd(){
+						dom.removeEventListener('touchmove',fnMove);
+						dom.removeEventListener('touchend',fnEnd)
+					}
+
+					dom.addEventListener('touchmove',fnMove,false)
+					dom.addEventListener('touchend',fnEnd,false)
+
+				},false)
+			}
+
+		}
+	</script>
 </head>
 <body>
-	
+	<div class="box a1"></div>
+	<div class="box a2"></div>
+	<div class="box a3"></div>
 </body>
 </html>

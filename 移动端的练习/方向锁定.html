@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>反向锁定</title>
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+</head>
+<script type="text/javascript">
+	window.onload=function(){
+		document.documentElement.addEventListener('touchstart',ev=>{
+			let startX=ev.targetTouches[0].clientX;
+			let startY=ev.targetTouches[0].clientY;
+			let dir=''; //--用于储存方向
+			
+			function fnMove(ev){
+				if(!dir){
+					if(Math.abs(ev.targetTouches[0].clientX-startX)>=5){
+						dir='X';
+					}else if(Math.abs(ev.targetTouches[0].clientY-startY)>=5){
+						dir='Y'
+					}
+				}else{
+					console.log(dir)
+				}
+			}
+
+			function fnEnd(){
+				document.documentElement.removeEventListener('touchmove',fnMove,false);
+				document.documentElement.removeEventListener('touchend',fnEnd,false);
+			}
+
+			document.documentElement.addEventListener('touchmove',fnMove,false);
+			document.documentElement.addEventListener('touchend',fnEnd,false);
+
+		},false);
+
+
+	}
+</script>
+<body>
+	
+</body>
+</html>

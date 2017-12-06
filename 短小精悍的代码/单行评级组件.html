@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>单行评级</title>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 60px;
+			border:1px solid red;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			let oDiv=document.querySelector('div');
+			let str="★★★★★☆☆☆☆☆";
+			let rate=0;
+			rate=4
+			oDiv.innerHTML=str.slice(5 - rate, 10 - rate);
+
+			//console.log(~~44.77)  取整的方法
+		}
+	</script>
+</head>
+<body>
+	<div></div>
+</body>
+</html>
