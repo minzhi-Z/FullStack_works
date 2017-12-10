@@ -24,9 +24,10 @@
 				}
 			}
 
-			function fnEnd(){
+			function fnEnd(ev){
 				document.documentElement.removeEventListener('touchmove',fnMove,false);
 				document.documentElement.removeEventListener('touchend',fnEnd,false);
+				console.log(ev)
 			}
 
 			document.documentElement.addEventListener('touchmove',fnMove,false);
