@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>消息框</title>
+</head>
+<style>
+   .bubbly{
+      width: 150px;
+      height: 50px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      /* border: 1px solid green; */
+      background: #b0b0b0;
+      border-radius: 5px;
+      color: #fff;
+   }
+   .bubbly::after{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-right-color: #b0b0b0;
+      top: 15px;
+      left: -20px;
+   }
+   section{
+      width: 500px;
+      height: 500px;
+      border: 2px solid red;
+      position: relative;
+   }
+</style>
+<body>
+   <section>
+      <p class="bubbly"></p>
+   </section>
+</body>
+</html>

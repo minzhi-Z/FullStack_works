@@ -1,0 +1,17 @@
+ 账号： 3468630931@qq.com 
+
+ 密码： szcj2017
+
+
+ 小程序ID： wxe2a112f1bf69d55a
+
+
+
+ 丁盯智能锁：
+     client_id:     07ef966ac755eef2dd44ba1f
+
+     client_secret: 64a8349ba22b07f09c3d3f181a6a7b6d
+
+     商户名:        苏州创爵智能科技有限公司
+
+     绑定手机号:    18550031208

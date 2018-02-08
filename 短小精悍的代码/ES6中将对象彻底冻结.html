@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>对象常量的实现</title>
+</head>
+<script>
+window.onload = function() {
+	//--声明一个引用对象常量，不可修改
+   var constObj = (obj) => {
+   	//--freeze方法冻结引用对象
+      Object.freeze(obj);
+      Object.keys(obj).forEach((key, i) => {
+         if (typeof obj[key] === 'object') {
+            constObj(obj[key])
+         }
+      })
+   }
+
+}
+</script>
+
+<body>
+</body>
+
+</html>

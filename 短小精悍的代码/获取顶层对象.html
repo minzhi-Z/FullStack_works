@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任何情况下都获取到顶层对象</title>
+</head>
+<script>
+	window.onload=function(){
+
+		var getGlobal = function(){
+			if(typeof self !== 'undefined'){ return self; }
+			if(typeof window !== 'undefined'){ return window; }
+			if(typeof global !== 'undefined'){ return global; }
+			throw new Error('没有找到顶层对象')
+		};
+
+	}
+</script>
+<body>
+	
+</body>
+</html>

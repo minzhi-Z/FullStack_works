@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+   // 处理过程是否必须同步？ 否！
+   // 数据是否必须按照顺序处理？  否！
+   function processArray(items,process,callback){
+      //items:数组,process:执行函数,callback:回调函数
+      let todo=[...items]; //克隆原数组
+
+      setTimeout(function(){
+         let start= +new Date();
+
+         do{
+            process(todo.shift());            
+         }while(todo.length>0&&(+new Date()-start<50));
+
+         if(todo.length>0){
+            //arguments.callee指向当前正在运行的匿名函数
+            setTimeout(arguments.callee,25);
+         }else{
+            callback(items)
+         }
+      },25);
+   }
+
+</script>
+</html>
