@@ -1,0 +1,1137 @@
+*{
+   margin: 0;
+   padding: 0;
+   font-family: "微软雅黑";
+}
+a{
+   cursor:pointer;
+}
+header{
+   width: 100%;
+   height: 160px;
+   min-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   border-bottom: 1px solid #f0f0f0;
+   /* outline: 1px solid red; */
+}
+header>div{
+   width: 140px;
+   height: 160px;
+   box-sizing: border-box;
+   font-size: 18px;
+   /* outline: 1px solid red; */
+   padding-top:60px;
+   text-align: center;
+   cursor: pointer;
+}
+header>div>p{
+   display: none;
+   font-size: 15px;
+   color: #b0b0b0;
+   margin-top: 4px;
+}
+.nav-actived{
+   background: #333333;
+   color: #ffffff;
+   border-bottom: 5px solid #FA552E;
+}
+#items{
+   width: 1200px;
+   margin: 30px auto;
+   text-align: center;
+}
+#items>span{
+   margin: 0 40px;
+   cursor: pointer;
+}
+section{
+   width: 1200px;
+   margin: 0 auto;
+}
+section>img{
+   width: 1200px;
+   height: 380px;
+}
+
+/* ---  #city 智慧城市的样式设置 */
+#city>div{
+   margin-top: 40px;
+   display: flex;
+}
+#city .slide{
+   width: 130px;
+   box-sizing: border-box;
+   padding-top: 10px;
+   border-right: 1px solid #f0f0f0;
+}
+#city .slide>p{
+   text-align: center;
+   margin-bottom: 30px;
+   cursor: pointer;
+   /* border-left: 3px solid #FA552E; */
+}
+#city .module>h3{
+   font-size: 20px;
+   font-weight: 600;
+   letter-spacing: 1px;
+   padding-bottom: 20px;
+   border-bottom: 1px solid #f0f0f0;
+}
+#city .module>h3>span{
+   font-weight: 100;
+   margin-left: 20px;
+}
+
+/* ----  .content1 平安城市的样式设置  */
+#city .content1{
+   width: 1070px;
+   box-sizing: border-box;
+   padding: 0 50px;
+}
+#city .content1>div{
+   padding-top: 30px;
+}
+.content1 p{
+   text-align: center;
+   margin: 20px 0;
+}
+.content1 .texts{
+   text-indent: 2rem;
+   line-height: 45px;
+   text-align: left;
+}
+.content1 .texts2{
+   margin-top: 10px;
+   margin-bottom: 40px;
+   text-indent: 2rem;
+   text-align: left;
+   line-height: 30px;
+}
+.content1 .img{
+   width: 100%;
+   /* height: 300px; */
+   text-align: center;
+   margin: 50px 0;
+}
+.content1>div>h3{
+   text-align: center;
+   margin: 50px 0;
+}
+.content1 .centers{
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   margin-bottom: 40px;
+}
+.content1 .centers>div{
+   width: 50%;
+   display: inline-block;
+}
+.content1 .centers>div:first-of-type{
+   margin-bottom: 30px;
+}
+.content1 .block{
+   display: inline-block;
+   width: 200px;
+   height: 40px;
+   box-sizing: border-box;
+   padding-left: 30px;
+   line-height: 40px;
+   font-weight: 600;
+   background: #E2E2E2;
+   border-radius: 5px;
+   margin-right: 20px;
+}
+
+/* ----  .content2 智慧交通的样式设置  */
+#city .content2{
+   width: 1070px;
+   box-sizing: border-box;
+   padding: 0 50px;
+   padding-bottom: 150px;
+   display: none;
+}
+#city .content2>.div1{
+   width: 100%;
+   height: 560px;
+   display: flex;
+   /* outline: 1px solid red; */
+}
+#city .content2 .block{
+   padding: 10px 80px 10px 30px;
+   background: #E2E2E2;
+   border-radius: 5px;
+   font-weight: 600;
+   display: inline-block;
+   margin-top: 60px;
+}
+.content2>.div1>.left{
+   width: 45%;
+}
+.content2 .left>span{
+   display: inline-block;
+   margin-top: 60px;
+}
+#city .content2 .texts{
+   text-indent: 2rem;
+   line-height: 40px;
+   margin-top: 10px;
+}
+.content2>.div1>.img{
+   width: 55%;
+   margin-top: 40px;
+   padding-right: 20px;
+   text-align: right;
+}
+.content2>h4{
+   margin-top: 100px;
+   text-align: center;
+   letter-spacing: 1px;
+}
+
+/* ----  .content3 智慧综治的样式设置  */
+#city .content3{
+   width: 1070px;
+   box-sizing: border-box;
+   padding: 0 50px;
+   display: none;
+}
+#city .content3 .texts{
+   text-indent: 2rem;
+   line-height: 60px;
+   margin-top: 10px;
+}
+.content3>h4{
+   margin-top: 60px;
+   font-size: 18px;
+   text-align: center;
+   letter-spacing: 1px;
+}
+.content3>.img{
+   width: 100%;
+   text-align: center;
+   margin:80px 0;
+}
+
+/* ----  .content4 智慧监所的样式设置  */
+#city .content4{
+   width: 1070px;
+   box-sizing: border-box;
+   padding: 0 50px;
+   display: none;
+}
+#city .content4 .texts{
+   text-indent: 2rem;
+   line-height: 50px;
+   margin-top: 10px;
+}
+.content4>h4{
+   margin-top: 60px;
+   font-size: 18px;
+   text-align: center;
+   letter-spacing: 1px;
+}
+.content4>.img{
+   width: 100%;
+   text-align: center;
+   margin:80px 0;
+}
+
+/* ---  .content5 智慧社区的样式设置 */
+#city .content5{
+   width: 1070px;
+   box-sizing: border-box;
+   padding: 0 50px;
+   display: none;
+}
+.content5 .texts{
+   text-indent: 2rem;
+   line-height: 50px;
+   margin-top: 10px;
+}
+.content5>.img{
+   width: 100%;
+   height: 380px;
+   text-align: center;
+   margin: 70px 0;
+}
+.content5>h4{
+   margin-top: 60px;
+   font-size: 18px;
+   text-align: center;
+   letter-spacing: 1px;
+   margin-bottom: 40px;
+}
+.content5>.items{
+   width: 100%;
+   height: 400px;
+   display: flex;
+   justify-content: space-between;
+}
+.content5>.items>div{
+   width: 300px;
+   height: 380px;
+   box-sizing: border-box;
+   padding: 0 40px;
+   border: 1px solid #f0f0f0;
+   border-radius: 10px;
+   text-align: center;
+}
+.items>div>h4{
+   width: 100%;
+   height: 40px;
+   line-height: 40px;
+   border-radius: 8px;
+   margin-top: 40px;
+   background: #E2E2E2;
+}
+.items>div>div{
+   border-bottom: 1px solid #f0f0f0;
+   padding-bottom: 10px;
+   margin: 15px 0;
+}
+.items>div>p{
+   margin: 15px 0;
+}
+
+/* ----  .content6 智慧建筑的样式设置  */
+#city .content6{
+   width: 1070px;
+   box-sizing: border-box;
+   padding: 0 50px;
+   display: none;
+}
+.content6>.texts{
+   text-indent: 2rem;
+   line-height: 50px;
+   margin-top: 10px;
+}
+.content6>.img{
+   width: 100%;
+   height: 430px;
+   text-align: center;
+   margin: 40px 0;
+}
+.content6>h4{
+   margin: 60px 0;
+   font-size: 18px;
+   text-align: center;
+   letter-spacing: 1px;
+}
+.content6>.bg-gray{
+   width: 200px;
+   height: 40px;
+   line-height: 40px;
+   text-align: center;
+   background: #E2E2E2;
+   border-radius: 6px;
+   margin-top: 50px;
+   margin-bottom: 25px;
+}
+
+/* ----  .content7 雪亮工程的样式设置  */
+#city .content7{
+   width: 1070px;
+   box-sizing: border-box;
+   padding: 0 50px;
+   display: none;
+}
+.content7>.texts{
+   text-indent: 2rem;
+   line-height: 50px;
+   margin-top: 10px;
+}
+.content7>h4{
+   margin: 70px 0;
+   font-size: 18px;
+   text-align: center;
+   letter-spacing: 1px;
+}
+.content7>.img{
+   width: 100%;
+   height: 220px;
+   text-align: center;
+   margin: 40px 0;
+}
+
+/* ----  .content8 智慧工地的样式设置  */
+#city .content8{
+   width: 1070px;
+   box-sizing: border-box;
+   padding: 0 50px;
+   display: none;
+}
+.content8>.texts{
+   text-indent: 2rem;
+   line-height: 50px;
+   margin-top: 10px;
+}
+.content8>.img{
+   width: 100%;
+   height: 330px; 
+   text-align: center;
+   margin: 50px 0;
+}
+
+/* ----  .content9 智慧森防的样式设置  */
+#city .content9{
+   width: 1070px;
+   box-sizing: border-box;
+   padding: 0 50px;
+   display: none;
+}
+.content9>.texts{
+   text-indent: 2rem;
+   line-height: 50px;
+   margin-top: 10px;
+}
+.content9>.items{
+   width: 100%;
+   height: 240px;
+   display: flex;
+   justify-content: space-around;
+   margin: 30px 0;
+}
+.content9>.items>div{
+   width: 180px;
+   height: 240px;
+   text-align: center;
+}
+.content9>.items>div>div{
+   width: 180px;
+   height: 180px;
+   margin: 20px auto;
+   border: none;
+}
+
+/* ----  .content10 智慧食药的样式设置  */
+#city .content10{
+   width: 1070px;
+   box-sizing: border-box;
+   padding: 0 50px;
+   display: none;
+}
+.content10>.texts{
+   text-indent: 2rem;
+   line-height: 50px;
+   margin-top: 10px;
+}
+.content10>h4{
+   margin: 70px 0;
+   font-size: 18px;
+   text-align: center;
+   letter-spacing: 1px;
+}
+.content10>.items{
+   width: 100%;
+   height: 150px;
+   display: flex;
+   justify-content: space-around;
+   margin-bottom: 60px;
+}
+.content10>.items>div{
+   width: 106px;
+   height: 150px;
+   text-align: center;
+}
+.content10>.items>div>div{
+   width: 106px;
+   height: 106px;
+   margin: 20px auto;
+   border: none;
+}
+
+/* ----  .content11 智慧农业的样式设置  */
+#city .content11{
+   width: 1070px;
+   box-sizing: border-box;
+   padding: 0 50px;
+   display: none;
+}
+.content11>.texts{
+   text-indent: 2rem;
+   line-height: 50px;
+   margin-top: 10px;
+}
+.content11>h4{
+   margin-top: 50px;
+   font-size: 18px;
+   text-align: center;
+   letter-spacing: 1px;
+}
+.content11>p{
+   margin: 30px 0;
+}
+.content11>.items{
+   width: 640px;
+   height: 350px;
+   margin: 0 auto;
+   display: flex;
+   flex-wrap: wrap;
+}
+.content11>.items>div{
+   width: 160px;
+   height: 160px;
+   text-align: center;
+}
+.content11>.items>div>div{
+   width: 102px;
+   height: 102px;
+   border: none;
+   margin: 0 auto;
+}
+
+
+/* ---  #hotel 智慧酒店的样式设置 */
+#hotel{
+   display: none;
+}
+#hotel>div{
+   margin-top: 60px;
+   padding-bottom: 50px;
+}
+#hotel .slide{
+   width: 130px;
+   padding-top: 10px;
+   border-right: 1px solid #f0f0f0;
+}
+#hotel .slide>p{
+   text-align: center;
+   margin-bottom: 30px;
+   cursor: pointer;
+   /* border-left: 3px solid #FA552E; */
+}
+#hotel .texts{
+   margin-bottom: 10px;
+   text-indent: 2rem;
+   text-align: left;
+   line-height: 50px;
+}
+#hotel .img{
+   width: 100%;
+   height: 300px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   /* outline: 1px solid red; */
+}
+#hotel .img>div{
+   text-align: center;
+}
+#hotel .img p{
+   margin-top: 20px;
+}
+#hotel h4{
+   text-align: center;
+   font-size: 18px; 
+   letter-spacing: 1px;
+   margin: 40px 0;
+}
+#hotel li{
+   list-style-type: disc;
+   margin: 30px 0;
+   margin-left: 20px;
+}
+#hotel .items{
+   width: 990px;
+   height: 150px;
+   margin: 0 auto;
+   margin-bottom: 50px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+#hotel .items>div{
+   width: 150px;
+   height: 150px;
+}
+
+
+/* ---  #pension 智慧养老的样式设置 */
+#pension{
+   display: none;
+}
+#pension>div{
+   margin-top: 60px;
+   display: flex;
+}
+#pension .slide{
+   width: 130px;
+   padding-top: 10px;
+   border-right: 1px solid #f0f0f0;
+}
+#pension .slide>p{
+   text-align: center;
+   margin-bottom: 40px;
+   cursor: pointer;
+   /* border-left: 3px solid #FA552E; */
+}
+
+/* ----  .content1 智慧养老的样式设置  */
+#pension .content1{
+   width: 980px;
+   margin: 0 50px;
+   /* display: none; */
+}
+#pension .content1>h3{
+   font-size: 20px;
+   font-weight: 600;
+   letter-spacing: 1px;
+   padding-bottom: 20px;
+   border-bottom: 1px solid #f0f0f0;
+}
+#pension .content1>div{
+   padding: 80px 0 150px 0;
+}
+#pension .content1>h3>span{
+   font-weight: 100;
+   margin-left: 20px;
+}
+#pension .content1 h4{
+   font-size: 18px;
+   text-align: center;
+   margin: 30px 0;
+}
+#pension .content1 .items{
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+}
+#pension .items>div{
+   width: 20%;
+   margin-top: 50px;
+   /* outline: 1px solid red; */
+   text-align: center;
+}
+#pension .items img{
+   width: 120px;
+   height: 120px;
+}
+#pension .items h4{
+   margin: 20px 0;
+}
+#pension .items p{
+   color: #b0b0b0;
+   margin: 10px 0;
+}
+
+/* ----  .content2 机构养老管理系统的样式设置  */
+#pension .content2{
+   width: 980px;
+   margin: 0 50px;
+   display: none;
+}
+#pension .content2>h3{
+   font-size: 20px;
+   font-weight: 600;
+   letter-spacing: 1px;
+   padding-bottom: 20px;
+   border-bottom: 1px solid #f0f0f0;
+}
+#pension .content2>h4{
+   text-align: left;
+   margin: 20px 0;
+   padding-left: 40px;
+}
+#pension .content2>p{
+   padding-left: 40px;
+   margin: 20px 0;
+}
+#pension .content2>.wygl{
+   height: 270px;
+   display: flex;
+   align-items: center;
+   padding-left: 40px;
+   margin: 50px 0;
+}
+#pension .wygl>.left{
+   width: 250px;
+   height: 165px;
+   /* border: 1px solid #f0f0f0; */
+}
+#pension .wygl>.right{
+   height: 270px;
+   margin-left: 50px;
+}
+.wygl>.right>h4,.wygl>.right>p{
+   margin: 20px;
+}
+#pension .wygl:nth-of-type(2){
+   border-bottom: 1px solid #f0f0f0;
+   padding-bottom: 50px;
+}
+#pension .content2>.nhgl{
+   width: 100%;
+   height: 360px;
+   margin-top: 30px;
+   box-sizing: border-box;
+   padding: 0 40px;
+   display: flex;
+   justify-content: space-between;
+}
+#pension .content2>.nhgl>div{
+   width: 200px;
+   height: 100%;
+   text-align: center;
+   /* border: 1px solid red; */
+}
+#pension .content2>.nhgl img{
+   margin-bottom: 15px;
+}
+#pension .content2>.center{
+   text-align: center;
+   margin-top: 60px;
+   padding-right: 40px;
+}
+#pension .content2>.zkpt{
+   width: 100%;
+   height: 540px;
+   text-align: center;
+   /* border: 1px solid red; */
+}
+#pension .content2>.znyj{
+   width: 100%;
+   height: 530px;
+   text-align: center;
+   margin-top: 50px;
+   box-sizing: border-box;
+   padding: 0 40px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+#pension .content2>.znyj>div{
+   width: 170px;
+   height: 230px;
+   margin: 0 50px;
+   /* border: 1px solid red; */
+   position: relative;
+}
+#pension .znyj>div>p{
+   width: 170px;
+   text-align: center;
+   position: absolute;
+   bottom: 20px;
+}
+#pension .content2>.znyj img{
+   margin-bottom: 20px;
+}
+#pension .content2>.hjgl{
+   width: 100%;
+   height: 380px;
+   box-sizing: border-box;
+   padding: 0 40px;
+   display: flex;
+   justify-content: space-between;
+}
+#pension .content2>.hjgl>div{
+   width: 280px;
+   height: 100%;
+   text-align: center;
+}
+.content2>.hjgl>div>h4,.content2>.hjgl>div>p{
+   margin: 10px 0;
+}
+.content2>.hjgl>div>div{
+   width: 280px;
+   height: 175px;
+   /* outline: 1px solid red; */
+}
+.content2>.hjgl>div>.green{
+   color: green;
+}
+#pension .content2>.xfxt-znyj{
+   width: 100%;
+   height: 330px;
+   text-align: center;
+   margin-top: 50px;
+   box-sizing: border-box;
+   padding: 0 40px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+#pension .xfxt-znyj>.xfxt{
+   width: 180px;
+   height: 150px;
+   margin: 0 40px;
+   /* border: 1px solid red; */
+   position: relative;
+}
+#pension .xfxt-znyj>.xfxt:nth-of-type(1)>img{
+   margin-top: 30px;
+}
+#pension .xfxt-znyj>.xfxt:nth-of-type(5)>img,#pension .xfxt-znyj>.xfxt:nth-of-type(6)>img{
+   margin-top: 15px;
+}
+#pension .xfxt-znyj>.xfxt>p{
+   width: 180px;
+   text-align: center;
+   position: absolute;
+   bottom: 0;
+}
+#pension .content2>.hjjc-znyj{
+   width: 100%;
+   height: 550px;
+   text-align: center;
+   box-sizing: border-box;
+   padding: 0 40px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+#pension .content2>.hjjc-znyj>div{
+   width: 240px;
+   height: 275px;
+   /* border: 1px solid red; */
+}
+#pension .content2>.hjjc-znyj>div>img{
+   margin-top: 40px;
+   margin-bottom: 30px;
+}
+#pension .content2>.hjjc-znyj>.bigimg{
+   width: 375px;
+   height: 275px;
+}
+#pension .content2>.hjjc-znyj>.bigimg>img{
+   margin: 0;
+}
+#pension .content2>.zmxt-znyj{
+   width: 100%;
+   height: 530px;
+   text-align: center;
+   margin-top: 40px;
+   box-sizing: border-box;
+   padding: 0 40px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+#pension .content2>.zmxt-znyj>div{
+   width: 180px;
+   height: 210px;
+   /* border: 1px solid red; */
+   position: relative;
+}
+.content2>.zmxt-znyj>div>p{
+   width: 100%;
+   text-align: center;
+   position: absolute;
+   bottom: 10px;
+}
+#pension .content2>.rygl{
+   width: 100%;
+   height: 380px;
+   box-sizing: border-box;
+   padding: 0 40px;
+   margin-top: 40px;
+   display: flex;
+   justify-content: space-around;
+   /* border: 1px solid red; */
+}
+#pension .content2>.csaq-znyj{
+   width: 100%;
+   height: 530px;
+   text-align: center;
+   margin-top: 40px;
+   box-sizing: border-box;
+   padding: 0 40px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+#pension .content2>.csaq-znyj>div{
+   width: 250px;
+   height: 220px;
+   position: relative;
+   /* border: 1px solid red; */
+}
+.content2>.csaq-znyj>div>p{
+   width: 100%;
+   text-align: center;
+   position: absolute;
+   bottom: 10px;
+}
+#pension .content2>.zcgl{
+   width: 100%;
+   height: 380px;
+   margin: 40px 0;
+   text-align: center;
+   box-sizing: border-box;
+   padding: 0 40px;
+   /* border: 1px solid red; */
+}
+#pension .content2>.jjjb{
+   width: 100%;
+   height: 410px;
+   margin-bottom: 40px;
+   box-sizing: border-box;
+   padding: 0 40px;
+   display: flex;
+   justify-content: space-between;
+   /* border: 1px solid red; */
+}
+#pension .content2>.jjjb>div{
+   width: 430px;
+   height: 100%;
+   text-align: center;
+   /* border: 1px solid red; */
+}
+#pension .content2>.hdjh{
+   width: 100%;
+   height: 390px;
+   box-sizing: border-box;
+   padding: 0 40px;
+   margin-bottom: 50px;
+   /* border: 1px solid red; */
+}
+#pension .content2>.smjh{
+   width: 100%;
+   height: 360px;
+   box-sizing: border-box;
+   padding: 0 40px;
+   /* border: 1px solid red; */
+   margin-bottom: 50px;
+}
+#pension .content2>.tzjh{
+   width: 100%;
+   height: 390px;
+   box-sizing: border-box;
+   padding: 0 40px;
+   /* border: 1px solid red; */
+   margin-bottom: 50px;
+}
+#pension .content2>.lrjh-znyj{
+   width: 100%;
+   height: 460px;
+   text-align: center;
+   margin-top: 40px;
+   box-sizing: border-box;
+   padding: 0 40px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+#pension .content2>.lrjh-znyj>div{
+   width: 220px;
+   height: 230px;
+   position: relative;
+   /* border: 1px solid red; */
+}
+#pension .content2>.lrjh-znyj>div>p{
+   width: 100%;
+   text-align: center;
+   position: absolute;
+   bottom: 0;
+}
+
+/* ----  .content3 居家/社区养老管理系统的样式设置  */
+#pension .content3{
+   width: 980px;
+   margin: 0 50px;
+   display: none;
+}
+#pension .content3>h3{
+   font-size: 20px;
+   font-weight: 600;
+   letter-spacing: 1px;
+   padding-bottom: 20px;
+   border-bottom: 1px solid #f0f0f0;
+}
+#pension .content3>h4{
+   text-align: left;
+   margin: 20px 0;
+   padding-left: 40px;
+}
+#pension .content3>p{
+   padding-left: 40px;
+   margin: 20px 0;
+}
+#pension .content3>.center{
+   text-align: center;
+}
+#pension .content3>.img{
+   text-align: center;
+   margin: 30px 0;
+}
+#pension .content3>.aqjh{
+   width: 100%;
+   height: 440px;
+   box-sizing: border-box;
+   padding: 0 40px;
+   display: flex;
+   justify-content: space-between;
+}
+.content3>.aqjh h4{
+   margin: 20px 0;
+}
+.content3>.aqjh>.img{
+   width: 50%;
+   text-align: center;
+   margin: 40px 0;
+}
+.content3>.aqjh>.img>img{
+   margin-top: 30px;
+}
+#pension .content3>.items{
+   width: 100%;
+   height: 380px;
+   box-sizing: border-box;
+   padding: 0 40px;
+   display: flex;
+   justify-content: space-around;
+   margin-bottom: 80px;
+}
+#pension .content3>.items>div{
+   width: 230px;
+   height: 380px;
+   /* border: 1px solid red; */
+   text-align: center;
+}
+#pension .content3>.items img{
+   width: 180px;
+   height: 322px;
+}
+#pension .content3>.items p{
+   color: #000000;
+}
+#pension .content3>.imgs{
+   width: 100%;
+   height: 350px;
+   text-align: center;
+}
+#pension .content3>.imgs>img{
+   margin: 0 100px;
+}
+
+/* ----  .content4 系统整合配套方案的样式设置  */
+#pension .content4{
+   width: 980px;
+   margin: 0 50px;
+   display: none;
+}
+#pension .content4>h3{
+   font-size: 20px;
+   font-weight: 600;
+   letter-spacing: 1px;
+   padding-bottom: 20px;
+   border-bottom: 1px solid #f0f0f0;
+}
+#pension .content4>h4{
+   text-align: left;
+   margin: 20px 0;
+   padding-left: 40px;
+}
+#pension .content4>p{
+   padding-left: 40px;
+   margin: 20px 0;
+}
+#pension .content4>.img{
+   text-align: center;
+   margin-bottom: 80px;
+}
+
+/* ----  .content5 数据增值配套服务的样式设置  */
+#pension .content5{
+   width: 980px;
+   margin: 0 50px;
+   display: none;
+}
+#pension .content5>h3{
+   font-size: 20px;
+   font-weight: 600;
+   letter-spacing: 1px;
+   padding-bottom: 20px;
+   border-bottom: 1px solid #f0f0f0;
+}
+#pension .content5>h4{
+   text-align: left;
+   margin: 20px 0;
+   padding-left: 40px;
+}
+#pension .content5>p{
+   padding-left: 40px;
+   margin: 20px 0;
+}
+#pension .content5>.img{
+   text-align: center;
+   margin-top: 40px;
+   margin-bottom: 100px;
+}
+
+
+
+/* 底部版权信息 样式 */
+footer{
+   width: 1200px;
+   height: 250px;
+   margin: 50px auto;
+   margin-bottom: 0;
+   display: flex;
+   justify-content: space-between;
+   border-top: 1px solid #f0f0f0;
+   position: relative;
+}
+footer>.telephone{
+   width: 230px;
+   height: 250px;
+   position: relative;
+}
+footer>.telephone>span{
+   display: inline-block;
+   margin: 158px 0 5px 10px;
+}
+footer>.scheme, footer>.product, footer>.join, footer>.about{
+   width: 110px;
+   height: 250px;
+}
+footer>.img{
+   width: 100px;
+   height: 250px;
+   text-align: center;
+   /* outline: 2px solid red; */
+}
+footer>.img>img{
+   margin-top: 30px;
+   margin-bottom: 10px;
+}
+footer>div>h4{
+   margin-top: 30px;
+}
+footer>div>p{
+   margin-top: 20px;
+}
+footer>div a{
+   text-decoration: none;
+   color: #000000;
+}
+footer>.backtop{
+   position: absolute;
+   top: -40px;
+   right: -40px;
+   cursor: pointer;
+}
+
+#copyright{
+   width: 100%;
+   height: 50px;
+   background: #000000;
+}
+#copyright>p{
+   width: 1200px;
+   height: 50px;
+   line-height: 50px;
+   margin: 0 auto;
+   position: relative;
+   color: #b0b0b0;
+   font-weight: 100;
+}
+#copyright>p>img{
+   position: absolute;
+   right: 0;
+   top: 0;
+}

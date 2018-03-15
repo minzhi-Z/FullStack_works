@@ -1,0 +1,187 @@
+*{
+   margin: 0;
+   padding: 0;
+   font-family: "微软雅黑";
+}
+a{
+   cursor:pointer;
+}
+header{
+   width: 100%;
+   height: 160px;
+   min-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   border-bottom: 1px solid #f0f0f0;
+   /* outline: 1px solid red; */
+}
+header>div{
+   width: 140px;
+   height: 160px;
+   font-size: 18px;
+   box-sizing: border-box;
+   /* outline: 1px solid red; */
+   padding-top:60px;
+   text-align: center;
+   cursor: pointer;
+}
+header>div>p{
+   display: none;
+   font-size: 15px;
+   color: #b0b0b0;
+   margin-top: 4px;
+}
+.nav-actived{
+   background: #333333;
+   color: #ffffff;
+   border-bottom: 5px solid #FA552E;
+}
+
+section{
+   width: 100%;
+   position: relative;
+}
+section>.bg{
+   width: 100%;
+   height: 560px;
+   background: #F6F7F7;
+   position: absolute;
+   top: 0;
+}
+section>.content{
+   width: 1200px;
+   height: 840px;
+   margin: 0 auto;
+   box-sizing: border-box;
+   padding: 90px 100px 110px 100px;
+   position: relative;
+   z-index: 99;
+   display: flex;
+}
+.content>.left{
+   width: 320px;
+   height: 620px;
+   margin-left: 70px;
+   /* outline: 1px solid red; */
+}
+.content>.right{
+   width: 550px;
+   height: 620px;
+   margin-left: 50px;
+   /* outline: 1px solid red; */
+   position: relative;
+}
+.right>h1{
+   margin-top: 100px;
+   font-size: 30px;
+}
+.right>p{
+   margin: 15px 0;
+}
+.right>.items{
+   position: absolute;
+   bottom: 230px;
+   color: #999999;
+}
+.items>span{
+   display: inline-block;
+   width: 70px;
+   height: 80px;
+   box-sizing: border-box;
+   text-align: center;
+   margin-right: 15px;
+   cursor: pointer;
+}
+.items img{
+   display: block;
+   margin: 0 auto;
+   margin-bottom: 8px;
+}
+.actived{
+   border-bottom: 2px solid black;
+   color: #000000;
+}
+
+
+.right>.download{
+   position: absolute;
+   bottom: 70px;
+}
+.download>img{
+   margin-right: 30px;
+}
+
+
+/* 底部版权信息 样式 */
+footer{
+   width: 1200px;
+   height: 250px;
+   margin: 0 auto;
+   margin-bottom: 0;
+   display: flex;
+   justify-content: space-between;
+   border-top: 1px solid #f0f0f0;
+   position: relative;
+}
+footer>.telephone{
+   width: 230px;
+   height: 250px;
+   position: relative;
+}
+footer>.telephone>span{
+   display: inline-block;
+   margin: 158px 0 5px 10px;
+}
+footer>.scheme, footer>.product, footer>.join, footer>.about{
+   width: 110px;
+   height: 250px;
+}
+footer>.img{
+   width: 100px;
+   height: 250px;
+   text-align: center;
+   /* outline: 2px solid red; */
+}
+footer>.img>img{
+   margin-top: 30px;
+   margin-bottom: 10px;
+}
+footer>div>h4{
+   margin-top: 30px;
+}
+footer>div>p{
+   margin-top: 20px;
+}
+footer>div a{
+   text-decoration: none;
+   color: #000000;
+}
+footer>.backtop{
+   position: absolute;
+   top: -40px;
+   right: -40px;
+   cursor: pointer;
+}
+
+#copyright{
+   width: 100%;
+   height: 50px;
+   background: #000000;
+}
+#copyright>p{
+   width: 1200px;
+   height: 50px;
+   line-height: 50px;
+   margin: 0 auto;
+   position: relative;
+   color: #b0b0b0;
+   font-weight: 100;
+}
+#copyright>p>img{
+   position: absolute;
+   right: 0;
+   top: 0;
+}

@@ -1,0 +1,212 @@
+*{
+   margin: 0;
+   padding: 0;
+   font-family: "微软雅黑";
+}
+a{
+   cursor:pointer;
+}
+header{
+   width: 100%;
+   height: 160px;
+   min-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   border-bottom: 1px solid #f0f0f0;
+   /* outline: 1px solid red; */
+}
+header>div{
+   width: 140px;
+   height: 160px;
+   box-sizing: border-box;
+   font-size: 18px;
+   /* outline: 1px solid red; */
+   padding-top:60px;
+   text-align: center;
+   cursor: pointer;
+}
+header>div>p{
+   display: none;
+   font-size: 15px;
+   color: #b0b0b0;
+   margin-top: 4px;
+}
+.nav-actived{
+   background: #333333;
+   color: #ffffff;
+   border-bottom: 5px solid #FA552E;
+}
+#items{
+   width: 1200px;
+   margin: 30px auto;
+   text-align: center;
+}
+#items>span{
+   margin: 0 40px;
+   cursor: pointer;
+}
+
+section{
+   width: 1200px;
+   margin: 0 auto;
+}
+section>img{
+   width: 1200px;
+   height: 380px;
+}
+section>div{
+   width: 100%;
+   box-sizing: border-box;
+   padding: 0 100px;
+}
+section>div>h1{
+   margin: 60px 0 30px 0;
+   font-size: 30px;
+}
+section>div>h1>span{
+   font-size: 18px;
+   color: #b0b0b0;
+   font-weight: 100;
+   margin-left: 20px;
+}
+
+/* ---  #summary 公司简介的样式设置 */
+#summary .texts{
+   text-indent: 2rem;
+   line-height: 40px;
+}
+#summary h4{
+   margin-top: 50px;
+}
+#summary p{
+   margin: 20px 0;
+}
+
+/* ---   #contact 联系我们的样式设置   */
+#contact{
+   display:none;
+}
+#contact h1{
+   margin-bottom: 60px;
+} 
+#contact p{
+   margin: 30px 0;
+}
+
+/* ---  #partner 合作伙伴的样式设置 */
+#partner{
+   display:none;
+}
+#partner h1{
+   margin-bottom: 50px;
+}
+#partner h4{
+   font-weight: 400;
+   margin-bottom: 20px;
+}
+#partner .img{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin-bottom: 30px;
+}
+#partner .img>div{
+   width: 175px; 
+   height: 65px;
+   border: 1px solid #f0f0f0;
+   margin-bottom: 20px;
+}
+#partner .img img{
+   width: 175px;
+   height: 65px;
+}
+
+/* ---  #join  加入我们的样式设置 */
+#join{
+   display: none;
+}
+#join h1{
+   margin-bottom: 60px;
+}
+#join li{
+   list-style: none;
+   margin: 10px 0;
+}
+
+
+
+
+
+/* 底部版权信息 样式 */
+footer{
+   width: 1200px;
+   height: 250px;
+   margin: 50px auto;
+   margin-bottom: 0;
+   display: flex;
+   justify-content: space-between;
+   border-top: 1px solid #f0f0f0;
+   position: relative;
+}
+footer>.telephone{
+   width: 230px;
+   height: 250px;
+   position: relative;
+}
+footer>.telephone>span{
+   display: inline-block;
+   margin: 158px 0 5px 10px;
+}
+footer>.scheme, footer>.product, footer>.join, footer>.about{
+   width: 110px;
+   height: 250px;
+}
+footer>.img{
+   width: 100px;
+   height: 250px;
+   text-align: center;
+   /* outline: 2px solid red; */
+}
+footer>.img>img{
+   margin-top: 30px;
+   margin-bottom: 10px;
+}
+footer>div>h4{
+   margin-top: 30px;
+}
+footer>div>p{
+   margin-top: 20px;
+}
+footer>div a{
+   text-decoration: none;
+   color: #000000;
+}
+footer>.backtop{
+   position: absolute;
+   top: -40px;
+   right: -40px;
+   cursor: pointer;
+}
+
+#copyright{
+   width: 100%;
+   height: 50px;
+   background: #000000;
+}
+#copyright>p{
+   width: 1200px;
+   height: 50px;
+   line-height: 50px;
+   margin: 0 auto;
+   position: relative;
+   color: #b0b0b0;
+   font-weight: 100;
+}
+#copyright>p>img{
+   position: absolute;
+   right: 0;
+   top: 0;
+}
